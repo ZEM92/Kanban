@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="script.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      type="image/png"
+      sizes="32x32"
+      rel="icon"
+      href="img/faviconkanban.png"
+    />
+  </head>
+  <body onload="init()">
+    <div class="main">
+      <div class="navbar-mobil">
+        <a href="board.html"
+          ><img src="img/logo.png" class="logo-navM" alt=""
+        /></a>
+        <img
+          src="img/nav.png"
+          alt=""
+          class="nav-icon"
+          onclick="showNavMobil()"
+        />
+        <div id="pop-nav" class="d-none pop-nav">
+          <span onclick="closePopNav()" class="x-span">X</span>
+          <ul>
+            <li><a href="board.html">BOARD</a></li>
+            <li><a href="backlog.html">BACKLOG</a></li>
+            <li><a href="addTask.html">ADD TASK</a></li>
+            <li><a href="archive.html">ARCHIVE</a></li>
+            <li><a href="help.html">HELP</a></li>
+          </ul>
+        </div>
+      </div>
+      <div w3-include-html="navbar.html" class="navbar-wrapper"></div>
+
+      <div class="content">
+        <h2>Help</h2>
+        <span class="blueText">Learning Management System Project</span>
+
+        <div class="KanbanMeaning">
+          <h4 class="Helph4">WHAT IS KANBAN?</h4>
+          <br />
+          Kanban originates from Japanese. There, かんばん (看板) means
+          something like "card", "board" or "receipt". Kanban is a work
+          management method developed by Taichii Ohno at Toyota in 1947. It is
+          an implementation of the control method known under the synonyms
+          call-off, call or pull principle. Kanban has gained popularity in
+          recent decades. Originally developed for manufacturing, software
+          developers later took a liking to it as well.<br />
+          <br />
+          Join is a Kanban board <br />
+          It gives you an overview of your current work situation and helps
+          visualizing the project flow in agile project management.<br /><br />
+          This app was built as an training project by Developerakademie.
+        </div>
+
+        <div class="KanbanMeaning">
+          <h4 class="Helph4">ADD A TASK</h4>
+          <br />
+
+          - Create new task <br />
+          - Fill the form and set a due date<br />
+          - Decide whether the task should end up in the board for direct
+          processing or in the backlog first.
+        </div>
+
+        <div class="KanbanMeaning">
+          <h4 class="Helph4">THE BOARD</h4>
+          <br />
+          - Each task passes through 4 stages.<br />
+          - You can move the task by drag and drop.<br />
+          - Archive or delete the completet task.<br />
+          - Click on the task to see details.<br />
+        </div>
+
+        <div class="KanbanMeaning">
+          <h4 class="Helph4">THE BACKLOG</h4>
+          <br />
+          The backlog is a collection of upcoming tasks and ideas that are not
+          yet in the focus of the project team. You can edit the task by
+          clicking on it.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

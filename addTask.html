@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="script.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="addTask.js"
+    ></script>
+    <script src="./mini_backend.js"></script>
+    <script src="users.js"></script>
+  </head>
+
+  <body onload="init()">
+    <div class="main">
+      <div w3-include-html="navbar.html" class="navbar-wrapper"></div>
+      <div class="content">
+        <h2>Add Task</h2>
+        <span class="blueText">Learning Management System Project</span>
+        <div class="addTaskBox">
+          <div class="firstRow flex">
+            <div class="width50 marginLeft">
+              <h4 class="blueText">TITLE</h4>
+              <input id="title" placeholder="Title" />
+            </div>
+            <div class="width50">
+              <h4 class="blueText">DUE DATE</h4>
+              <input type="date" id="dueDate" />
+            </div>
+          </div>
+          <div class="secondRow flex">
+            <div class="width50 marginLeft">
+              <h4 class="blueText">CATEGORY</h4>
+              <select id="category">
+                <option>Management</option>
+                <option>Marketing</option>
+                <option>Product</option>
+                <option>Sale</option>
+              </select>
+            </div>
+            <div class="width50">
+              <h4 class="blueText">URGENCY</h4>
+              <select id="urgency">
+                <option>High</option>
+                <option value="">Medium</option>
+                <option value="">Low</option>
+              </select>
+            </div>
+          </div>
+          <div class="thirdRow flex">
+            <div class="width50 marginLeft">
+              <h4 class="blueText">DESCRIPTION</h4>
+              <textarea id="text">
+Describe your task..
+                            </textarea
+              >
+            </div>
+            <div class="width50">
+              <h4 class="blueText">ASSIGNED TO</h4>
+              <div class="assignedToRow">
+                <img
+                  src="Profilpicture/profilepicture1.png"
+                  class="assignedTo"
+                />
+                <img src="img/icon plus.png" class="plus-btn" />
+              </div>
+              <div class="assignedToRow2">
+                <img
+                  class="cancelbutton"
+                  src="img/trash.png"
+                  onclick="cancel()"
+                />
+                <button class="createTask" onclick="addTask()">
+                  CREATE TASK
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

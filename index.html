@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+
+    <script language="javascript" type="text/javascript" src="script.js"></script>
+    <script src="./mini_backend.js"></script>
+
+    
+</head>
+
+<body>
+
+    <div>
+        <img src="img/stairHouse.jpg" class="background-image">
+
+        <form action="board.html">
+            <div class="wrapper-login">
+                <div class="login-box">
+                    <div class="flex login-row">
+                        <span>Login name:</span>
+                        <input type="text" placeholder="enter Name" class="input-login" id="username">
+                    </div>
+    
+                    <div class="flex login-row">
+                        <span>Password:</span>
+                        <input type="password" placeholder="enter Password" class="input-login" id="pasword" default="Gast">
+                    </div>
+    
+                    <a href="board.html">
+                        <input type="submit" class="login-btn" name="" value="Login" disabled id="disabledbtn">
+                    </a>
+                    <p class="test-login">Testzugang: Name: Gast pw: 123</p>
+                </div>
+            </div>
+
+
+        </form>
+        
+
+        <script>
+        let username = document.getElementById('username');
+        let pasword = document.getElementById('pasword');
+
+        pasword.addEventListener('keyup' , e => {
+        if (e.currentTarget.value == 123){
+           console.log('korrekt')
+           disabledbtn.disabled = false;
+        };
+        }); 
+
+    </script>
+
+</body>
+
+</html>
